@@ -1,5 +1,7 @@
 package trie;
 
+import java.util.HashMap;
+
 public class Trie {
     private Node root;
 
@@ -7,53 +9,24 @@ public class Trie {
         root = new Node();
     }
 
-
     public void insert(String key) {
-
-      Node current = root;
-      for(int i = 0; i <  key.length(); i++){
-        int index = key.charAt(i) - 'a'; 
-      }
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public boolean search(String word) {
-        Node current = root;
-        for (char ch : word.toCharArray()) {
-            int index = ch - 'a';
-            if (current.children[index] == null) {
-                return false;
-            }
-            current = current.children[index];
-        }
-        return current.isEndOfWord;
+
+    }
+
+    public void delete(String key) {
+
     }
 
     private static class Node {
-      HashMap<Node> children;
+      HashMap<Character, Node> children;
       boolean isEndOfWord;
   
       public Node() {
-          children = new Node[52];
+          children = new HashMap<Character, Node>();
           isEndOfWord = false;
       }
   }
