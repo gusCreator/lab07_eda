@@ -1,7 +1,9 @@
 package Test;
 import trie.*;
 
-public class test {
+import trie.Trie;
+
+public class Test {
     public static void main(String[] args) {
         Trie trie = new Trie();
         trie.insert("Steven");
