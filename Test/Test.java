@@ -18,10 +18,10 @@ public class Test {
 
         //Prueba de replace
         System.out.println("\nSección Replace");
-        trie.replace("hello","hellos");
+        trie.replace("hello","hell");
         System.out.println("Buscar 'hello': " + trie.search("hello"));
         System.out.println("Buscar 'hell': " + trie.search("hell"));
-        System.out.println("Buscar 'hellos': " + trie.search("hell"));
+        System.out.println("Buscar 'hellos': " + trie.search("hellos"));
 
         // Prueba de repeticiones
         System.out.println("\nProbando método getRepetitions:");

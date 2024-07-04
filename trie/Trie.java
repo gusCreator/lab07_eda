@@ -31,7 +31,7 @@ public class Trie {
   }
   
   public boolean replace(String key, String newKey) {
-    Node node = this.searchNode(key);
+    Node node = searchNode(key);
 
     if (node == null || !node.isEndOfWord) {
         return false; 
@@ -46,6 +46,7 @@ public class Trie {
     insert(newKey);
     return true;
   }
+
 
   private Node searchNode(String key) {
     Node current = root;
