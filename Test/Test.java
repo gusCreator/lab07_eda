@@ -11,12 +11,17 @@ public class Test {
         trie.insert("hello");
         System.out.println("Buscar 'hello': " + trie.search("hello"));
         System.out.println("Buscar 'world': " + trie.search("world"));
-
         trie.insert("world");
         System.out.println("Buscar 'world': " + trie.search("world"));
-
         trie.insert("hello");
         System.out.println("Buscar 'hello' después de insertar de nuevo: " + trie.search("hello"));
+
+        //Prueba de replace
+        System.out.println("\nSección Replace");
+        trie.replace("hello","hellos");
+        System.out.println("Buscar 'hello': " + trie.search("hello"));
+        System.out.println("Buscar 'hell': " + trie.search("hell"));
+        System.out.println("Buscar 'hellos': " + trie.search("hell"));
 
         // Prueba de repeticiones
         System.out.println("\nProbando método getRepetitions:");
