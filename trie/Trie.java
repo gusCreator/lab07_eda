@@ -3,7 +3,9 @@ package trie;
 import java.util.HashMap;
 
 public class Trie {
+
   private Node root;
+  private int size;
 
   public Trie() {
     root = new Node();
@@ -13,6 +15,9 @@ public class Trie {
     Node current = root;
     for (char c : key.toCharArray()) {
       current = current.children.computeIfAbsent(c, cha -> new Node());
+    }
+    if(current.repetitions == 0){
+      size++;
     }
     current.repetitions++;
     current.isEndOfWord = true;
@@ -60,6 +65,10 @@ public class Trie {
       current = node;
     }
     return current;
+  }
+
+  public int size() {
+    return size;
   }
 
   private static class Node {
