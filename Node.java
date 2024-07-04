@@ -1,9 +1,9 @@
 class Node {
-    TrieNode[] children;
+    Node[] children;
     boolean isEndOfWord;
 
-    public TrieNode() {
-        children = new TrieNode[26];
+    public Node() {
+        children = new Node[26];
         isEndOfWord = false;
     }
 }
