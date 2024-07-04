@@ -14,7 +14,16 @@ public class Trie {
     }
 
     public boolean search(String word) {
-
+        Node current = root;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            Node node = current.children.get(ch);
+            if (node == null) {
+                return false;
+            }
+            current = node;
+        }
+        return current.isEndOfWord;
     }
 
     public void delete(String key) {
