@@ -1,4 +1,5 @@
 package Test;
+import trie.*;
 
 public class test {
     public static void main(String[] args) {
