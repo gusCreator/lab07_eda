@@ -1,4 +1,4 @@
-package Trie;
+package trie;
 class Node {
     Node[] children;
     boolean isEndOfWord;
