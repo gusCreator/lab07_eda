@@ -1,5 +1,4 @@
 package Test;
-import trie.*;
 
 import trie.Trie;
 
