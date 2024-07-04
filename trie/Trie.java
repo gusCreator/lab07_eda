@@ -29,6 +29,23 @@ public class Trie {
     if(node == null) return 0;
     return node.repetitions;
   }
+  
+  public boolean replace(String key, String newKey) {
+    Node node = this.searchNode(key);
+
+    if (node == null || !node.isEndOfWord) {
+        return false; 
+    }
+
+    Node existingNode = searchNode(newKey);
+    if (existingNode != null && existingNode.isEndOfWord) {
+        return false; 
+    }
+
+    node.isEndOfWord = false;
+    insert(newKey);
+    return true;
+  }
 
   private Node searchNode(String key) {
     Node current = root;
