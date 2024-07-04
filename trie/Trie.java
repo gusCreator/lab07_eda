@@ -8,6 +8,15 @@ public class Trie {
     }
 
 
+    public void insert(String key) {
+
+      Node current = root;
+      for(int i = 0; i <  key.length(); i++){
+        int index = key.charAt(i) - 'a'; 
+      }
+
+    }
+
 
 
 
@@ -38,4 +47,14 @@ public class Trie {
         }
         return current.isEndOfWord;
     }
+
+    private static class Node {
+      HashMap<Node> children;
+      boolean isEndOfWord;
+  
+      public Node() {
+          children = new Node[52];
+          isEndOfWord = false;
+      }
+  }
 }
