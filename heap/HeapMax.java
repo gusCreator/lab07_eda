@@ -8,7 +8,7 @@ public class HeapMax<E extends Comparable<E>> {
   @SuppressWarnings("unchecked")
   public HeapMax(int initialSize) {
     this.size = 0;
-    this.arr = (E[]) new Object();
+    this.arr = (E[]) new Comparable[initialSize];
   }
 
   public void insert(E x) {
@@ -30,7 +30,7 @@ public class HeapMax<E extends Comparable<E>> {
     E temp = arr[0];
     arr[0] = arr[this.size - 1];
     for(int i = 0; i * 2 + 1 < this.size && i * 2 + 2 < this.size;){
-      if(arr[i * 2 + 1].compareTo(arr[i * 2 + 2]) < 0) {
+      if(arr[i * 2 + 1].compareTo(arr[i * 2 + 2]) > 0) {
         E tempe = arr[i];
         arr[i] = arr[i * 2 + 1];
         arr[i * 2 + 1] = tempe;
@@ -42,6 +42,7 @@ public class HeapMax<E extends Comparable<E>> {
         i = i * 2 + 2;
       }
     }
+    this.size--;
     return temp;
   }
 
@@ -53,7 +54,7 @@ public class HeapMax<E extends Comparable<E>> {
     if(isEmpty()) return "[]";
     String s = "[";
     for(E e : this.arr){
-      s += e.toString() + ", ";
+      s += e + ", ";
     }
     return s + "]";
   }
