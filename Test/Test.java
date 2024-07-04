@@ -24,5 +24,4 @@ public class Test {
         System.out.println("Repeticiones de 'world': " + trie.getRepetitions("world")); // Debería ser 1
         System.out.println("Repeticiones de 'foo': " + trie.getRepetitions("foo")); // Debería ser 0
     }
-    }
 }
