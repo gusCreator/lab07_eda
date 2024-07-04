@@ -10,7 +10,11 @@ public class Trie {
     }
 
     public void insert(String key) {
-
+      Node current = root;
+      for(char c :  key.toCharArray()){
+        current = current.children.computeIfAbsent(c, cha -> new Node());
+      }
+      current.isEndOfWord = true;
     }
 
     public boolean search(String word) {
