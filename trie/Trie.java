@@ -43,6 +43,7 @@ public class Trie {
     }
 
     node.isEndOfWord = false;
+    node.repetitions--;
     insert(newKey);
     return true;
   }

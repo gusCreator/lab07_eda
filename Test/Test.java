@@ -28,5 +28,7 @@ public class Test {
         System.out.println("Repeticiones de 'hello': " + trie.getRepetitions("hello"));
         System.out.println("Repeticiones de 'world': " + trie.getRepetitions("world")); 
         System.out.println("Repeticiones de 'foo': " + trie.getRepetitions("foo")); 
+        System.out.println("Repeticiones de 'hell': " + trie.getRepetitions("hell")); 
+    
     }
 }
