@@ -3,7 +3,7 @@ class Node {
     boolean isEndOfWord;
 
     public Node() {
-        children = new Node[26];
+        children = new Node[52];
         isEndOfWord = false;
     }
 }
